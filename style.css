@@ -9,12 +9,12 @@
 }
 #movie_2 {
   position: absolute;
-  background-color: yellow;
+  background-color: green;
   opacity: 0.5;
 }
 #movie_3 {
   position: absolute;
-  background-color: yellow;
+  background-color: red;
   opacity: 0.5;
 }
 
