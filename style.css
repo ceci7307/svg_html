@@ -3,21 +3,29 @@
 
 #movie_1 {
   position: absolute;
-  background-color: yellow;
-  opacity: 0.5;
 }
 #movie_2 {
   position: absolute;
-  background-color: green;
-  opacity: 0.5;
 }
 #movie_3 {
   position: absolute;
-  background-color: red;
-  opacity: 0.5;
 }
 svg {
   width: 100%;
+}
+.pic {
+  width: 3vw;
+  height: 5vw;
+  border: solid 2px teal;
+}
+img {
+  width: 100%;
+}
+h1 {
+  font-size: 10px;
+}
+p {
+  font-size: 10px;
 }
 
 .cls-1,

@@ -11,10 +11,31 @@
     <h1>The movie timeline</h1>
 
     <div id="svg_timeline">
-      <div id="movie_1">Movie 1</div>
-      <div id="movie_2">Movie 2</div>
-      <div id="movie_3">Movie 3</div>
+      <div
+        id="movie_1"
+        class="svgplaceholder"
+        data-svgplaceholder="philosopher"
+      ></div>
+      <div
+        id="movie_2"
+        class="svgplaceholder"
+        data-svgplaceholder="chamber"
+      ></div>
+      <div
+        id="movie_3"
+        class="svgplaceholder"
+        data-svgplaceholder="prisoner"
+      ></div>
     </div>
+
+    <template id="movie_template">
+      <h1 data-field="title"></h1>
+      <div class="pic">
+        <img data-field="image" src="" alt="" />
+      </div>
+      <p data-field="year">Year</p>
+      <p data-field="director">Director</p>
+    </template>
 
     <script src="myscript.js"></script>
   </body>
