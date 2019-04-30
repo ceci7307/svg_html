@@ -1,5 +1,4 @@
 #svg_timeline {
-  position: relative;
 }
 
 #movie_1 {
@@ -16,6 +15,9 @@
   position: absolute;
   background-color: red;
   opacity: 0.5;
+}
+svg {
+  width: 100%;
 }
 
 .cls-1,
@@ -50,7 +52,4 @@
 
 .cls-4 {
   stroke-width: 5px;
-}
-
-.cls-5 {
 }

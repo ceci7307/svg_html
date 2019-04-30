@@ -1,4 +1,5 @@
 window.addEventListener("DOMContentLoaded", loadSVG);
+window.addEventListener("resize", calSize);
 
 function loadSVG() {
   console.log("Load SVG");
@@ -12,18 +13,23 @@ function loadSVG() {
         .querySelector("#svg_timeline")
         .insertAdjacentHTML("afterbegin", svgdata);
 
-      fitRectangle("#philosopher .HTML_placeholder", "#movie_1");
-      fitRectangle("#chamber .HTML_placeholder", "#movie_2");
-      fitRectangle("#prisoner .HTML_placeholder", "#movie_3");
+      calSize();
     });
+}
+
+function calSize() {
+  fitRectangle("#philosopher .HTML_placeholder", "#movie_1");
+  fitRectangle("#chamber .HTML_placeholder", "#movie_2");
+  fitRectangle("#prisoner .HTML_placeholder", "#movie_3");
 }
 
 function fitRectangle(svgElement, htmlElement) {
   svgElement = document.querySelector(svgElement);
   htmlElement = document.querySelector(htmlElement);
+  const rect = svgElement.getBoundingClientRect();
 
-  htmlElement.style.left = svgElement.getAttribute("x") + "px";
-  htmlElement.style.top = svgElement.getAttribute("y") + "px";
-  htmlElement.style.width = svgElement.getAttribute("width") + "px";
-  htmlElement.style.height = svgElement.getAttribute("height") + "px";
+  htmlElement.style.left = rect.x + "px";
+  htmlElement.style.top = rect.y + "px";
+  htmlElement.style.width = rect.width + "px";
+  htmlElement.style.height = rect.height + "px";
 }
